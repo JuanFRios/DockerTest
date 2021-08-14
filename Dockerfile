@@ -1,14 +1,15 @@
 #PARTIR DE UNA IMAGEN
 FROM node:12
-
-# AÑADIR PACKAGE
-ADD package.json package-lock.json
+# ESPACIO DE TRABAJO
+WORKDIR /dockertest
+# ANADIR PACKAGE
+ADD package.json package-lock.json /dockertest/
 
 # INSTALAR DEPENDENCIAS
 RUN npm install
 
 #COPIAR EL CODIGO
-ADD . app.js
+ADD . /dockertest
 
 #EXPOSE
 EXPOSE 5000
