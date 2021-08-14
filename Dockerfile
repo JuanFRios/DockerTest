@@ -15,6 +15,6 @@ ADD . /dockertest
 EXPOSE 5000
 
 #CORRER EL CONTENEDOR
-CMD ['node', 'app.js']
+CMD ['node' 'app.js']
 
 
